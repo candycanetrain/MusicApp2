@@ -1,0 +1,23 @@
+<h1>New User</h1>
+
+<%= @errors %>
+
+<%= link_to "Already a user? Sign in", new_session_url %>
+<br>
+
+<form action="<%= users_url %>" method="post">
+  <input
+      type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>">
+  <label for="email">Email Address:</label>
+  <input id="email" type="string" name="user[email]">
+  <br>
+  <label for="password">Password:</label>
+  <input id="password" type="string" name="user[password]">
+
+  <br>
+  <input type="submit" value="Register">
+</form>
+
+</form>
